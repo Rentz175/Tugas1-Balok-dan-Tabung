@@ -9,21 +9,28 @@ package tugas1;
  * @author Febrian
  */
 public class Lingkaran implements BangunDatar {
-    int jarijari;
+    private int jari;
 
-    public Lingkaran(int jarijari) {
-        this.jarijari = jarijari;
+    
+    
+    public int jarijari(){//geter
+        return jari;
+    }
+    
+    public void jarijari(int newjarijari){// <-- seter
+        this.jari = newjarijari;
     }
 
     @Override
     public double hitungLuas() {
-        double luas = Math.PI*jarijari*jarijari;
+        double luas = Math.PI*jari*jari;
         return luas;
+        
     }
 
     @Override
     public double hitungKeliling() {
-        double keliling = Math.PI*jarijari*2;
+        double keliling = Math.PI*jari*2;
         return keliling;
     }
     

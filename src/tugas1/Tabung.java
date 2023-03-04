@@ -8,21 +8,28 @@ package tugas1;
  *
  * @author Febrian
  */
-public class Tabung extends Lingkaran{
+//pada tabung menngunakan encapulation untuk menghitung meanfaatkan seter dan geter 
+//sebenarnya lebih praktis pakai extend :v (memenuhi kewajiban tugas)
+public class Tabung implements BangunRuang {
     int tinggi;
+    
+    Lingkaran li = new Lingkaran(); //instansiasi
 
-    public Tabung(int tinggi, int jarijari) {
-        super(jarijari);
+    //constructor
+    public Tabung(int tinggi, int jarijari) { //menggunakan metode get() dan set() untuk mengakses
+        li.jarijari(jarijari);//<--set()
         this.tinggi = tinggi;
     }
-    
-    public double hitungLuasTabung(){
-        double luasTabung = super.hitungKeliling()*(jarijari + tinggi);
+
+    @Override
+    public double hitungLuasPermukaan() {  
+        double luasTabung = 2*li.hitungLuas()+(li.hitungKeliling()*tinggi);//<--get()
         return luasTabung;
     }
-    
-    public double hitungVolumeTabung(){
-        double volumeTabung = super.hitungLuas()*tinggi;
+
+    @Override
+    public double hitungVolume() {
+        double volumeTabung = li.hitungLuas()*tinggi;//<--get()
         return volumeTabung;
     }
 

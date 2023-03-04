@@ -8,9 +8,10 @@ package tugas1;
  *
  * @author Febrian
  */
-public class PersegiPanjang implements BangunDatar{
+public class PersegiPanjang implements BangunDatar{//implement
     int panjang, lebar;
 
+    //constructor
     public PersegiPanjang(int panjang, int lebar) {
         this.panjang = panjang;
         this.lebar = lebar;

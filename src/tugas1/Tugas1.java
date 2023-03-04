@@ -9,7 +9,7 @@ import java.util.Scanner;
 /**
  *
  * @author Febrian
- */
+ */ 
 public class Tugas1 {
 
     /**
@@ -46,15 +46,15 @@ public class Tugas1 {
                     System.out.print("Input Tinggi  : ");
                     tinggi = input.nextInt();
                     
-                    Balok bl = new Balok(tinggi, panjang, lebar);
+                    Balok bl = new Balok(tinggi, panjang, lebar);//instansiasi
                     
                     System.out.println("========");
                     System.out.println("Hasil : ");
                     System.out.println("--------");
                     System.out.println("Luas Persegi Panjang    = " + bl.hitungLuas());
                     System.out.println("Keliling Persegi Panjang= " + bl.hitungKeliling());
-                    System.out.println("Volume Balok            = " + bl.hitungVolumeBalok());
-                    System.out.println("Luas Permukaan Balok    = " + bl.hitungLuasBalok());
+                    System.out.println("Volume Balok            = " + bl.hitungVolume());
+                    System.out.println("Luas Permukaan Balok    = " + bl.hitungLuasPermukaan());
                     break;
                     
                 case 2: 
@@ -65,15 +65,17 @@ public class Tugas1 {
                     System.out.print("Input Tinggi    : ");
                     tinggi = input.nextInt();
                     
-                    Tabung tb = new Tabung(tinggi,jarijari);
+                    Tabung tb = new Tabung(tinggi,jarijari);//instansiasi untuk tabung
+                    Lingkaran li = new Lingkaran();//perubahan 3 extend tabung ke lingkaran dengan seter input gagal
+                    li.jarijari(jarijari);//melaukan input ulang untuk class lingkaran
                     
                     System.out.println("========");
                     System.out.println("Hasil : ");
                     System.out.println("--------");
-                    System.out.println("Luas Lingkaran        = " + tb.hitungLuas());
-                    System.out.println("Keliling Lingkaran    = " + tb.hitungKeliling());
-                    System.out.println("Volume Tabung         = " + tb.hitungVolumeTabung());
-                    System.out.println("Luas Permukaan Tabung = " + tb.hitungLuasTabung());
+                    System.out.println("Luas Lingkaran        = " + li.hitungLuas());
+                    System.out.println("Keliling Lingkaran    = " + li.hitungKeliling());
+                    System.out.println("Volume Tabung         = " + tb.hitungVolume());
+                    System.out.println("Luas Permukaan Tabung = " + tb.hitungLuasPermukaan());
                     break;
                 case 0:
                     System.exit(0);
@@ -84,7 +86,7 @@ public class Tugas1 {
             }
             System.out.println("===============");
             System.out.print("Kembali? (y/n) : ");
-            ulang = input.next().charAt(0);
+            ulang = input.next().charAt(0);//.charAt untuk membaca char (y/n)
             
         } while (ulang != 'n');
        
